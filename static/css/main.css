@@ -1,0 +1,127 @@
+
+/* Simple dashboard grid CSS */
+body {
+  color: rgb(0, 0, 0);
+  background: rgb(37, 37, 37);
+}
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* Dark Mode styles */
+body.dark-theme {
+  color: rgb(0, 0, 0);
+  background: #eee;
+}
+
+/* Assign grid instructions to our parent grid container */
+.grid-container {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    grid-template-rows: 50px 1fr 50px;
+    grid-template-areas:
+        "sidenav header"
+        "sidenav main"
+        "sidenav footer";
+    height: 100vh;
+}
+
+/* Give every child element its grid name */
+.header {
+    grid-area: header;
+    background-color: #648ca6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    margin-top: -10px;
+    width: 1160px;
+    background-color: #648ca6;
+
+}
+
+.sidenav {
+    justify-items: stretch;
+    display: flex;
+    margin: -9px ;
+    grid-area: sidenav;
+    background-color: #495479;
+    flex-direction: column;
+    box-shadow: 5px 1px 5px rgba(68, 68, 68, 0.6);
+}
+
+.sidenav__list {
+    padding: 0;
+    margin-top: 85px;
+    list-style-type: none;
+}
+
+.sidenav__list-item {
+    padding: 20px 20px 20px 40px;
+    color: #ddd;
+}
+
+.sidenav__list-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+.main {
+    grid-area: main;
+}
+
+.main-overview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(265px, 1fr)); /* Where the magic happens */
+    grid-auto-rows: 94px;
+    grid-gap: 20px;
+    margin: 20px;
+
+}
+  
+.overviewcard {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #d3d3;
+    box-shadow: 5px 1px 5px rgba(68, 68, 68, 0.6);
+}
+
+
+
+  .main-cards {
+    column-count: 2;
+    column-gap: 20px;
+    margin: 20px;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #82bef6;
+    margin-bottom: 20px;
+    -webkit-column-break-inside: avoid;
+    padding: 24px;
+    box-sizing: border-box;
+        box-shadow: 5px 1px 5px rgba(68, 68, 68, 0.6);
+
+  }
+
+  /* Force varying heights to simulate dynamic content */
+  .card:first-child {
+    height: 485px;
+  }
+
+  .card:nth-child(2) {
+    height: 200px;
+  }
+
+  .card:nth-child(3) {
+    height: 265px;
+  }
+
+.footer {
+    text-align: end;
+    grid-area: footer;
+}

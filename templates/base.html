@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style rel="stylesheet" href="" ></style>
+    <link rel="stylesheet" href="{% static 'css/main.css'%}">
+
+    <title>PetFull</title>
+
+    
+</head>
+<body class="dark-theme || light-theme">
+    <div class="grid-container">
+        <header class="header">            
+            <div class="header__search">Search...</div>
+            <div class="header__avatar">
+                <button class="btn-toggle">Toggle Dark Mode</button>
+                Your face
+            </div>
+        </header>
+        <aside class="sidenav">
+                <ul class="sidenav__list">
+                    <li class="sidenav__list-item">Item One</li>
+                    <li class="sidenav__list-item">Item Two</li>
+                    <li class="sidenav__list-item">Item Three</li>
+                    <li class="sidenav__list-item">Item Four</li>
+                    <li class="sidenav__list-item">Item Five</li>
+                </ul>              
+        </aside>
+        <main class="main">
+            <div class="main-overview">
+                <div class="overviewcard">
+                    <div class="overviewcard__icon">Overview</div>
+                    <div class="overviewcard__info">Card</div>
+                </div>
+                <div class="overviewcard">
+                    <div class="overviewcard__icon">Overview</div>
+                    <div class="overviewcard__info">Card</div>
+                </div>
+                <div class="overviewcard">
+                    <div class="overviewcard__icon">Overview</div>
+                    <div class="overviewcard__info">Card</div>
+                </div>
+                <div class="overviewcard">
+                    <div class="overviewcard__icon">Overview</div>
+                    <div class="overviewcard__info">Card</div>
+                </div>
+            </div>
+
+            <div class="main-cards">
+                <div class="card">Card</div>
+                <div class="card">Card</div>
+                <div class="card">Card</div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer__copyright">&copy; 2022 MTH</div>
+            <div class="footer__signature">Made with by Encinasj</div>
+        </footer>
+    </div>    
+</body>
+
+<script>
+
+    // Select the button
+        const btn = document.querySelector('.btn-toggle');
+
+        // Listen for a click on the button
+        btn.addEventListener('click', function () {
+            // Then toggle (add/remove) the .dark-theme class to the body
+            document.body.classList.toggle('dark-theme');
+        })
+</script>
+</html>
